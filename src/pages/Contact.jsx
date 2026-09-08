@@ -5,13 +5,29 @@ import Reveal from "../components/Reveal";
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: wire this up to your backend / form service (e.g. Formspree, EmailJS)
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
-    setTimeout(() => setSent(false), 3000);
+    setError(false);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xljenovb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (res.ok) {
+        setSent(true);
+        setForm({ name: "", email: "", message: "" });
+        setTimeout(() => setSent(false), 3000);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    }
   };
 
   return (
@@ -61,20 +77,22 @@ export default function Contact() {
               <button className="btn btn-primary" type="submit">
                 {sent ? "Sent — thank you!" : "Send message"} <Send size={16} />
               </button>
+              {error && <p style={{ color: "var(--mauve)", fontSize: "0.85rem", marginTop: 8 }}>
+                Something went wrong — please try again.
+              </p>}
             </form>
 
             <div className="socials">
               <a className="social-btn" href="https://github.com/RatiloeMbonani" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
-              <a className="social-btn" href="www.linkedin.com/in/ratiloe-mbonani" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
-              <a className="social-btn" href="https://instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
+              <a className="social-btn" href="https://www.linkedin.com/in/ratiloe-mbonani" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
+              <a className="social-btn" href="https://instagram.com/ratiloe.ee" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
             </div>
           </Reveal>
 
           <Reveal delay={1}>
             <div className="contact-card">
-              <div className="sun-mini" />
-              <span className="eyebrow" style={{ color: "var(--gold)" }}>Quick facts</span>
-              <h3>Usually online after golden hour.</h3>
+              <span className="eyebrow" style={{ color: "var(--mauve)" }}>Quick facts</span>
+              <h3>Let's build something together.</h3>
               <p>
                 Open to internships,learnership, hackathons, and collaborations that mix
                 good code with good design.

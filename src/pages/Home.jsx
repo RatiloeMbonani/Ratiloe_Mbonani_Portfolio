@@ -10,7 +10,6 @@ export default function Home() {
   const typed = useTypewriter([
     "full-stack developer in progress.",
     "hackathon addict.",
-    "sunset chaser.",
     "visual storyteller.",
     "ICT student — multimedia design.",
   ]);
@@ -18,7 +17,6 @@ export default function Home() {
   return (
     <section className="hero">
       <div className="hero-bg">
-        <div className="sun" />
         <div className="horizon" />
       </div>
 
@@ -37,8 +35,8 @@ export default function Home() {
 
           <Reveal delay={2}>
             <p className="hero-sub">
-              I build things for the web, chase impossible deadlines at hackathons, and
-              spend my golden hours somewhere between a code editor and a sunset.
+              I build things for the web, chase impossible deadlines at hackathons,
+               and I'm always looking for the next thing to learn.
             </p>
           </Reveal>
 
@@ -56,11 +54,7 @@ export default function Home() {
 
         <Reveal delay={2}>
           <div className="terminal">
-            <div className="terminal-bar">
-              <span className="dot" style={{ background: "#F0793C" }} />
-              <span className="dot" style={{ background: "#E8AE3D" }} />
-              <span className="dot" style={{ background: "#C81457" }} />
-            </div>
+            
             <div className="terminal-body">
               <div className="terminal-line">// whoami.js</div>
               <div>
@@ -74,7 +68,7 @@ export default function Home() {
               <div className="terminal-line" style={{ marginTop: 18 }}>
                 // studying ICT, specialising in multimedia design
               </div>
-              <div className="terminal-line">// currently: shipping, learning, glowing</div>
+              <div className="terminal-line">// currently: growing, learning, upskilling</div>
             </div>
           </div>
         </Reveal>
