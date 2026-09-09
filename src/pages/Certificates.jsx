@@ -9,7 +9,7 @@ export default function Certificates() {
       <div className="container">
         <Reveal className="section-head">
           <span className="eyebrow">Certifications</span>
-          <h2>Courses &amp; certificates I've completed.</h2>
+          <h2 className="cert-heading">Courses &amp; certificates I've completed.</h2>
         </Reveal>
 
         <div className="cert-grid">

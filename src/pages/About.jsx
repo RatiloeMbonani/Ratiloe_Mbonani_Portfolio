@@ -1,6 +1,7 @@
 import React from "react";
 import Reveal from "../components/Reveal";
-import portraitImage from "../../images/Lebogang.jpeg";
+
+const portraitImage = "/images/Lebogang.jpeg";
 
 export default function About() {
   return (
