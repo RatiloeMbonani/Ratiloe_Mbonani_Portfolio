@@ -58,13 +58,17 @@ export default function About() {
             <div className="cv-actions">
               <a
                 className="btn btn-primary"
-                href="/ratiloe-mbonani-cv.pdf"
+                href="/resume/Ratiloe-Mbonani-Resume.pdf"
                 target="_blank"
                 rel="noreferrer"
               >
                 View CV
               </a>
-              <a className="btn btn-outline" href="/ratiloe-mbonani-cv.pdf" download>
+              <a
+                className="btn btn-outline"
+                href="/resume/Ratiloe-Mbonani-Resume.pdf"
+                download="Ratiloe-Mbonani-Resume.pdf"
+              >
                 Download CV
               </a>
             </div>

@@ -24,7 +24,14 @@ const projects = [
     github: "https://github.com/RatiloeMbonani/inkwave-creative-flow.git",
   },
   
-   
+   {
+        title: "Varsity Path",
+        desc: "A personalised academic-improvement and university-readiness platform for South African Grade 11-12 students tracking results, surfacing knowledge gaps, and matching students to eligible programmes at UCT, Stellenbosch, UWC, and CPUT based on real institution-specific admission rules.",
+        tags: ["React", "TypeScript", "Firebase", "Firestore", "Gemini AI"],
+        role: "Full-Stack Developer & Designer",
+        image: "/images/varsity-path.jpeg",
+        github: "https://github.com/RatiloeMbonani/Varsity_Path.git"
+},
 
 ];
 
