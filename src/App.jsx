@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ChatWidget from "./components/ChatWidget";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+      <ChatWidget />
     </>
   );
 }
