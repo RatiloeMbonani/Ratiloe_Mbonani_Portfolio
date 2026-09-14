@@ -29,8 +29,8 @@ export default function Home() {
           <Reveal delay={1}>
             <h1 className="hero-title">
               Hey, I'm <em>Ratiloe Mbonani.</em>
-            
             </h1>
+            <h2>Full Stack Developer</h2>
           </Reveal>
 
           <Reveal delay={2}>
