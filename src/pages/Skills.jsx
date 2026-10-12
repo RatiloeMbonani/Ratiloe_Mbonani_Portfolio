@@ -1,10 +1,10 @@
 import React from "react";
-import { Code2, Sparkles, Camera, Sun } from "lucide-react";
+import { Code2, Sparkles, Camera, Wrench } from "lucide-react";
 import Reveal from "../components/Reveal";
 import useReveal from "../hooks/useReveal";
 import { skillGroups, tools } from "../data/skills";
 
-const ICONS = { Code2, Sparkles, Camera, Sun };
+const ICONS = { Code2, Sparkles, Camera };
 
 function SkillBar({ name, value }) {
   const ref = useReveal();
@@ -45,18 +45,18 @@ export default function Skills() {
               </Reveal>
             );
           })}
+          <Reveal delay={3}>
+            <div className="skill-cat-head">
+              <Wrench size={20} color="var(--pink)" />
+              <h3>Everyday Toolkit</h3>
+            </div>
+            <div>
+              {tools.map((tool) => (
+                <SkillBar key={tool.name} name={tool.name} value={tool.value} />
+              ))}
+            </div>
+          </Reveal>
         </div>
-
-        <Reveal delay={2} className="skill-cat-head" style={{ marginTop: 56 }}>
-          <h3 style={{ marginBottom: 0 }}>Everyday toolkit</h3>
-        </Reveal>
-        <Reveal delay={3}>
-          <div className="toolchips">
-            {tools.map((t) => (
-              <span className="chip" key={t}>{t}</span>
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

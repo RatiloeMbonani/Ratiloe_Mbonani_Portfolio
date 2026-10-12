@@ -16,10 +16,6 @@ export default function Home() {
 
   return (
     <section className="hero">
-      <div className="hero-bg">
-        <div className="horizon" />
-      </div>
-
       <div className="container hero-grid">
         <div>
           <Reveal>

@@ -103,7 +103,7 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid var(--line);
 }
 .nav-inner {
-  max-width: 1080px; margin: 0 auto; padding: 18px 28px;
+  width: 100%; padding: 18px 28px;
   display: flex; align-items: center;
 }
 .logo {
@@ -112,7 +112,7 @@ h1, h2, h3, h4 {
   display: flex; align-items: baseline; gap: 2px;
 }
 .logo span { color: var(--pink); }
-.nav-actions { margin-left: auto; display: flex; align-items: center; }
+.nav-actions { margin-left: auto; display: flex; align-items: center; justify-content: flex-end; }
 .nav-links { display: flex; gap: 6px; align-items: center; }
 .nav-btn {
   font-family: 'Space Mono', monospace;
@@ -170,12 +170,6 @@ h1, h2, h3, h4 {
 /* ---------- HERO / TERMINAL ---------- */
 .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding: 140px 0 80px; overflow: hidden; }
 .hero-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.horizon {
-  position: absolute; left: 0; right: 0; bottom: 8%; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--text) 20%, var(--text) 80%, transparent);
-  opacity: 0.15;
-}
-
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; }
 @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
 

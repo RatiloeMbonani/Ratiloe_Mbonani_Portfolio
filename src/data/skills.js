@@ -27,28 +27,11 @@ export const skillGroups = [
       { name: "Adobe Indesign & illustrator", value: 85 },
     ],
   },
-  {
-    title: "Currently exploring",
-    icon: "Sun",
-    skills: [
-      { name: "Full-Stack Architecture", value: 79 },
-      { name: "API Integration", value: 68 },
-      { name: "Motion Design", value: 60 },
-    ],
-  },
 ];
 
 export const tools = [
-  "VS Code",
-  "GitHub",
-  "Figma",
-  "Adobe Indesign",
-  "Adobe Illustrator",  
-  "Canva",
-  "Postman",
-  "Laravel",
-  "React",
-  "Express",
-  "Node.js"
-
+  { name: "Visual Studio Code", value: 95 },
+  { name: "GitHub", value: 85 },
+  { name: "MySQL Workbench", value: 90 },
+  { name: "Canva", value: 90 },
 ];
